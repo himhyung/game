@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>cat card</title>
 
-  <!-- 귀여운 폰트 -->
+  <!-- Cute font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
@@ -15,54 +15,44 @@
 
 <body>
   <header class="top">
-    <div class="top-left" aria-hidden="true"></div>
+    <div class="topbar">
+      <div class="top-left" aria-hidden="true"></div>
 
-    <div class="brand" aria-label="사이트 이름">
-      <span class="brand-icons" aria-hidden="true">
-        <span class="icon">♡</span>
-        <span class="icon">🐾</span>
-      </span>
-      <span class="brand-name">cat card</span>
-      <span class="brand-icons" aria-hidden="true">
-        <span class="icon">🐱</span>
-        <span class="icon">♡</span>
-      </span>
-    </div>
+      <div class="brand" aria-label="사이트 이름">
+        <span class="brand-icons" aria-hidden="true">♡ 🐾</span>
+        <span class="brand-name">cat card</span>
+        <span class="brand-icons" aria-hidden="true">🐱 ♡</span>
+      </div>
 
-    <div class="top-right">
-      <span class="status" id="statusText">지갑 미연결</span>
-      <button class="btn connect" id="connectBtn" type="button">
-        Connect MetaMask
-      </button>
+      <div class="top-right">
+        <button class="btn connect" id="connectBtn" type="button">Connect MetaMask</button>
+      </div>
     </div>
   </header>
 
   <main class="hero">
     <div class="hero-inner">
-      <div class="chip">pink & cute ♡</div>
+      <div class="chip">pink &amp; cute ♡</div>
 
-      <h1 class="title">Cat Card</h1>
+      <h1 class="title">
+        Cat Card <span class="title-emoji" aria-hidden="true">🐱♡</span>
+      </h1>
+
       <p class="subtitle">
-        오른쪽 위에서 지갑을 연결하고, 아래 버튼으로 Cat Card Draw를 실행해봐!
+        오른쪽 위에서 지갑을 연결하고, 아래 버튼으로<br/>
+        <span class="em">Cat Card Draw</span>를 실행해봐!
       </p>
 
-      <button class="btn draw" id="drawBtn" type="button">
-        Cat Card Draw
-      </button>
+      <button class="btn draw" id="drawBtn" type="button">Cat Card Draw</button>
 
-      <div class="panel">
-        <div class="panel-row">
-          <div class="label">Wallet</div>
-          <div class="value" id="walletText">—</div>
-        </div>
-        <div class="panel-row">
-          <div class="label">Result</div>
-          <div class="value" id="resultText">버튼을 눌러 카드를 뽑아봐 🐾</div>
-        </div>
-      </div>
+      <!-- ✅ 패널(동그라미 친 부분) 제거됨. 결과는 작은 말풍선으로만 표시 -->
+      <p class="result-pill" id="resultText" aria-live="polite">
+        버튼을 눌러 카드를 뽑아봐 🐾
+      </p>
 
       <p class="note">
-        * 메타마스크가 설치되어 있어야 연결돼. (모바일은 MetaMask 앱 내 브라우저에서 열면 쉬워)
+        * MetaMask가 설치되어 있어야 연결돼.<br/>
+        (모바일은 MetaMask 앱 내 브라우저에서 GitHub Pages 주소를 열면 쉬워)
       </p>
     </div>
   </main>
