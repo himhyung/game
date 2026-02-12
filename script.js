@@ -41,7 +41,6 @@ async function connectMetaMask() {
       setDisconnectedUI("연결 실패");
     }
   } catch (err) {
-    // 사용자가 취소한 경우가 가장 흔함
     setDisconnectedUI("연결 취소됨");
     resultText.textContent = "연결을 취소했어. 다시 연결하려면 Connect MetaMask를 눌러줘.";
   }
@@ -59,10 +58,9 @@ drawBtn.addEventListener("click", async () => {
     return;
   }
 
-  // 여기부터 “진짜 드로우(컨트랙트 호출)” 로직을 나중에 붙이면 됨
   resultText.textContent = "드로우 중... 🐱🎴";
 
-  // 데모용 랜덤 결과
+  // 데모용 랜덤 결과 (나중에 컨트랙트 호출로 교체 가능)
   const cats = ["Strawberry Cat", "Cloud Cat", "Cherry Cat", "Angel Cat", "Sparkle Cat"];
   const picked = cats[Math.floor(Math.random() * cats.length)];
 
